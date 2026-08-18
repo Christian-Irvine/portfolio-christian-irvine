@@ -1,3 +1,5 @@
+import '../App.css'
+
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -13,23 +15,26 @@ class NavPair {
 
 const NavBar: React.FC = () => {
   const routes: Array<NavPair> = [
-    new NavPair("", "Home"),
+    //new NavPair("", "Home"), // Uncomment if you want a home button - the name functions as one
     new NavPair("programming", "Programming"),
-    new NavPair("game-development", "Game Development"),
+    new NavPair("game-development", "Games"),
     new NavPair("youtube", "Youtube"),
     new NavPair("music", "Music"),
   ];
 
   return (
     <>
-      <div className="bg-slate-700 flex justify-evenly w-full">
-            {routes.map((route: NavPair) => (
-                <Link to={`/${route.key}`}>
-                  <div className="px-15 py-8 hover:bg-slate-800">
-                    {route.name}
-                  </div>
-                </Link>
-            ))}
+      <div className="bg-slate-700 flex justify-end w-full">
+        <Link className="mr-auto px-5" to={`/`}>
+          <h1>Christian</h1>
+        </Link>
+        {routes.map((route: NavPair) => (
+          <Link to={`/${route.key}`} key={route.key}>
+            <div className="w-50 py-8 hover:bg-slate-800">
+              <h3>{route.name}</h3>
+            </div>
+          </Link>
+        ))}
       </div>
       <Outlet />
     </>
