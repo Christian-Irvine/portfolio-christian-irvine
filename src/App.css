@@ -13,3 +13,20 @@ h3 {
   font-size: 22px;
 }
 
+p {
+  font-size: 18px;
+  color: #dfd0b8;
+}
+
+#root {
+  background-color: #222831;
+}
+
+.navbar,
+.navbar-button {
+  background-color: #393e46;
+}
+
+.navbar-button:hover {
+   background-color: #2a2d32;
+}

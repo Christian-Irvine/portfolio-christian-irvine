@@ -24,13 +24,13 @@ const NavBar: React.FC = () => {
 
   return (
     <>
-      <div className="bg-slate-700 flex justify-end w-full">
+      <div className="flex justify-end w-full navbar">
         <Link className="mr-auto px-5" to={`/`}>
           <h1>Christian</h1>
         </Link>
         {routes.map((route: NavPair) => (
           <Link to={`/${route.key}`} key={route.key}>
-            <div className="w-50 py-8 hover:bg-slate-800">
+            <div className="w-50 py-8 navbar-button">
               <h3>{route.name}</h3>
             </div>
           </Link>
