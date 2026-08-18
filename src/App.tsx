@@ -1,6 +1,7 @@
 import './App.css'
-import { HashRouter as Routes, Route, HashRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 
+import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Programming from './components/Programming';
 import GameDevelopment from './components/GameDevelopment';
@@ -11,11 +12,13 @@ const App: React.FC =() => {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="programming" element={<Programming />}/>
-        <Route path="game-development" element={<GameDevelopment />}/>
-        <Route path="youtube" element={<Youtube />}/>
-        <Route path="music" element={<Music />}/>
+        <Route path="/" element={<NavBar />}>
+          <Route path="/" element={<Home />}/>
+          <Route path="programming" element={<Programming />}/>
+          <Route path="game-development" element={<GameDevelopment />}/>
+          <Route path="youtube" element={<Youtube />}/>
+          <Route path="music" element={<Music />}/>
+        </Route>
       </Routes>
     </HashRouter>
   )
