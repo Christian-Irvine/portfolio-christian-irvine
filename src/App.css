@@ -1,20 +1,30 @@
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: antiquewhite;
   font-weight: bold;
 }
 
 h1 {
+  font-size: 90px;
+}
+
+h2 {
   font-size: 60px;
 }
 
 h3 {
+  font-size: 40px;
+  line-height: 1.4;
+}
+
+h4 {
   font-size: 22px;
 }
 
 p {
-  font-size: 18px;
+  font-size: 20px;
   color: #dfd0b8;
 }
 
@@ -28,5 +38,10 @@ p {
 }
 
 .navbar-button:hover {
-   background-color: #2a2d32;
+  background-color: #2a2d32;
+}
+
+.other-color {
+  /* The other colour from the colour pallete */
+  color: #948979; 
 }
