@@ -7,7 +7,7 @@ h4 {
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 3rem;
 }
 
 h2 {
@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 1.4;
 }
 
@@ -28,8 +28,42 @@ p {
   color: #dfd0b8;
 }
 
+/* This aligns with md in tailwind */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+/* This aligns with lg in tailwind */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+/* This aligns with xl in tailwind */
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 5.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
 #root {
   background-color: #222831;
+  height: 100%;
 }
 
 .navbar,

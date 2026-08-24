@@ -24,13 +24,13 @@ const NavBar: React.FC = () => {
 
   return (
     <>
-      <div className="flex justify-end w-full navbar">
+      <div className="flex justify-end w-full navbar min-h-1/8">
         <Link className="mr-auto px-5 flex items-center" to={`/`}>
           <h2>Christian</h2>
         </Link>
         {routes.map((route: NavPair) => (
           <Link to={`/${route.key}`} key={route.key}>
-            <div className="w-50 py-8 navbar-button">
+            <div className="w-50 navbar-button min-h-full flex items-center justify-center">
               <h4>{route.name}</h4>
             </div>
           </Link>
