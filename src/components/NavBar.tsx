@@ -2,9 +2,11 @@ import '../App.css'
 
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+
+import menuIcon from "../assets/menu.png"
 
 import useWindowDimensions from "../hooks/useWindowDimensions"
-import { useEffect, useState } from 'react';
 
 class NavPair {
   constructor(key: string, name: string) {
@@ -17,7 +19,7 @@ class NavPair {
 }
 
 const NavBar: React.FC = () => {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const maxWidth: number = 1024;
 
   const routes: Array<NavPair> = [
@@ -56,7 +58,9 @@ const NavBar: React.FC = () => {
             ))}
           </>
        ) : (
-        <button onClick={() => handleNavDisplay()} className="aspect-square navbar-button">O</button>
+        <button onClick={() => handleNavDisplay()} className="aspect-square navbar-button">
+          <img className="p-7" src={menuIcon} alt="A menu dropdown"/>
+        </button>
        )}
       </div>
       {showNav && width <= maxWidth &&
