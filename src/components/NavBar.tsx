@@ -7,16 +7,7 @@ import { useEffect, useState } from 'react';
 import menuIcon from "../assets/menu.png"
 
 import useWindowDimensions from "../hooks/useWindowDimensions"
-
-class NavPair {
-  constructor(key: string, name: string) {
-    this.key = key;
-    this.name = name;
-  }
-
-  key: string;
-  name: string;
-}
+import { NavPair } from '../Utils';
 
 const NavBar: React.FC = () => {
   const { width } = useWindowDimensions();

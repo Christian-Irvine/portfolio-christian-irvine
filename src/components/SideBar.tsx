@@ -1,13 +1,18 @@
 import '../App.css'
 
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 
 import useWindowDimensions from "../hooks/useWindowDimensions"
+import { NavPair } from '../Utils';
 
-import menuIcon from "../assets/menu.png"
+export interface SideBarProps {
+  subPages: Array<NavPair>;
+}
 
-const SideBar: React.FC =() => {
+const SideBar: React.FC<SideBarProps> = (
+  props: SideBarProps,
+) => {
   const { width } = useWindowDimensions();
   const maxWidth: number = 1024;
 
@@ -25,18 +30,24 @@ const SideBar: React.FC =() => {
     <>
       <div className="flex flex-col lg:flex-row min-h-7/8">
         {showSide ? (
-        <div className="bg-green-300 lg:w-1/7 min-h-7/8">
+        <div className="nav-color lg:w-1/7 min-h-7/8">
           <button className="nav-button w-full p-4" onClick={() => handleSideDisplay()}>
-            <h4>Close Side</h4>
+            <h4>Close</h4>
           </button>
-          <p>Hey this is a sidebar</p>
+          {props.subPages.map((route: NavPair) => (
+            <Link to={`./${route.key}`} key={route.key}>
+              <div className="nav-button w-full p-4">
+                <h4>{route.name}</h4>
+              </div>
+            </Link>
+          ))}
         </div>
         ) : (
-          <button className="nav-button w-10 h-15 mt-5 z-10 fixed rounded-e-full" onClick={() => handleSideDisplay()}>
+          <button className="nav-button w-9 hover:w-12 h-15 mt-5 z-10 fixed rounded-e-full" onClick={() => handleSideDisplay()}>
             <h4>{">"}</h4>
           </button>
         )}
-        <div className="bg-orange-300 lg:w-full">
+        <div className="lg:w-full">
           <Outlet />
         </div>
       </div>

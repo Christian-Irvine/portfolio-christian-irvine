@@ -75,6 +75,10 @@ p {
   background-color: #2a2d32;
 }
 
+.nav-color {
+  background-color: #393e46;
+}
+
 .other-color {
   /* The other colour from the colour pallete */
   color: #948979; 
