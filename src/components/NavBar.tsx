@@ -51,14 +51,14 @@ const NavBar: React.FC = () => {
           <>
             {routes.map((route: NavPair) => (
               <Link to={`/${route.key}`} key={route.key}>
-                <div className="w-50 navbar-button min-h-full flex items-center justify-center">
+                <div className="w-50 nav-button min-h-full flex items-center justify-center">
                   <h4>{route.name}</h4>
                 </div>
               </Link>
             ))}
           </>
        ) : (
-        <button onClick={() => handleNavDisplay()} className="aspect-square navbar-button">
+        <button onClick={() => handleNavDisplay()} className="aspect-square nav-button">
           <img className="p-7" src={menuIcon} alt="A menu dropdown"/>
         </button>
        )}
@@ -67,7 +67,7 @@ const NavBar: React.FC = () => {
         <div className="flex flex-col">
             {routes.map((route: NavPair) => (
               <Link to={`/${route.key}`} key={route.key} onClick={() => handleNavDisplay()}>
-                <div className="w-full navbar-button p-5 flex items-center">
+                <div className="w-full nav-button p-5 flex items-center">
                   <h4>{route.name}</h4>
                 </div>
               </Link>

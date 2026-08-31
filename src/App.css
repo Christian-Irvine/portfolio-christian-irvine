@@ -67,11 +67,11 @@ p {
 }
 
 .navbar,
-.navbar-button {
+.nav-button {
   background-color: #393e46;
 }
 
-.navbar-button:hover {
+.nav-button:hover {
   background-color: #2a2d32;
 }
 
