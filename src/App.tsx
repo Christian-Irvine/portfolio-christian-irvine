@@ -11,12 +11,14 @@ import GameDevelopment from './components/GameDevelopment';
 import Youtube from './components/Youtube';
 import Music from './components/Music';
 
+import SAPS from './components/SAPS';
 import FishShooter2D from './components/FishShooter2D';
 import GodSaveTheQueen from './components/GodSaveTheQueen';
 
 const App: React.FC =() => {
   const gameDevSubPages: Array<NavPair> = [
     new NavPair("", "Game Development"),
+    new NavPair("saps", "S.A.P.S"),
     new NavPair("2d-fish-shooter", "2D Fish Shooter"),
     new NavPair("god-save-the-queen", "God Save The Queen"),
   ]
@@ -30,8 +32,9 @@ const App: React.FC =() => {
           <Route path="programming" element={<Programming />}/>
           <Route path="game-development" element={<SideBar subPages={gameDevSubPages} />}>
             <Route path="" element={<GameDevelopment />}/>
-            <Route path={gameDevSubPages[1].key} element={<FishShooter2D />}/>
-            <Route path={gameDevSubPages[2].key} element={<GodSaveTheQueen />}/>
+            <Route path={gameDevSubPages[1].key} element={<SAPS />}/>
+            <Route path={gameDevSubPages[2].key} element={<FishShooter2D />}/>
+            <Route path={gameDevSubPages[3].key} element={<GodSaveTheQueen />}/>
           </Route>
           <Route path="youtube" element={<Youtube />}/>
           <Route path="music" element={<Music />}/>

@@ -83,3 +83,10 @@ p {
   /* The other colour from the colour pallete */
   color: #948979; 
 }
+
+.carousel {
+  min-width: 100%;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+}
