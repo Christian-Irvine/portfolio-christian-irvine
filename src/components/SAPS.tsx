@@ -4,8 +4,8 @@ import { CarouselItem } from '../Utils';
 
 const SAPS: React.FC =() => {
   const carouselContents: Array<CarouselItem> = [
-    new CarouselItem("/images/saps/sapsLogo.png", "SAPS Gameplay Image", "image"),
     new CarouselItem("https://www.youtube.com/embed/4Snu6IJurjU", "SAPS Gameplay Trailer", "youtube"),
+    new CarouselItem("/images/saps/sapsLogo.png", "SAPS Gameplay Image", "image"),
   ]
 
   return (

@@ -19,3 +19,5 @@ export class CarouselItem {
   title: string;
   url: string;
 }
+
+export const Clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
