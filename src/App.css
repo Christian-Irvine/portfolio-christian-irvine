@@ -104,3 +104,15 @@ p {
 .carousel-button:hover {
   background-color: #222327;
 }
+
+.play-button {
+  width: 150px;
+  height: 65px;
+  border-radius: 20px;
+  box-shadow: 5px 10px 5px #1d2229;
+  background-color: #209920;
+}
+
+.play-button:hover {
+  background-color: #1f801f;
+}

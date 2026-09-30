@@ -1,14 +1,12 @@
 import '../App.css'
 import { useState } from 'react';
-import { CarouselItem, Clamp } from '../Utils';
+import { CarouselItem } from '../Utils';
 
 export interface CarouselProps {
   contents: Array<CarouselItem>;
 }
 
-const Carousel: React.FC<CarouselProps> = (
-  props: CarouselProps,
-) => {
+const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
   const [index, setIndex] = useState<number>(0);
 
   const moveSlide = (newIndex: number) => {
