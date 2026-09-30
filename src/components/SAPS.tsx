@@ -15,7 +15,7 @@ const SAPS: React.FC =() => {
       <Carousel contents={carouselContents}/>
       <div className="flex justify-center">
         <div className="w-2/3 pt-10 pb-10 text-left leading-8">
-          <PlayButton url="https://loerad.itch.io/saps"/>
+          <PlayButton displayName="Play" url="https://loerad.itch.io/saps"/>
           <p className="pt-5">
             Saps is an action steal VR game developed by me and a few other students as our capstone project at Otago Polytechnic.
             The goal of the game is to sneak around and find a target with specific information given to you on a card.
